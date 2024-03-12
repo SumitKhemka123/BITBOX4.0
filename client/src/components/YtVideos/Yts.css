@@ -11,6 +11,7 @@
 
 body {
     font-family: sans-serif;
+    background: #d1d5db;
 }
 
 h1 {
@@ -23,16 +24,20 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
 }
 
+.yt-head {
+    margin-top: 10px;
+    font-family: 'roboto';
+}
+
 .wrapper {
     padding: 10px 10px;
-    margin: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin: 10px 0px;
 }
 
-
+/* 
 .input {
     width: 350px;
     border: 3px solid #000;
@@ -42,7 +47,7 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
-}
+} */
 
 .video-container {
     display: flex;
@@ -86,7 +91,7 @@ h1 {
 }
 
 /* Button CSS */
-.sbt {
+/* .sbt {
     align-items: center;
     appearance: none;
     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
@@ -129,4 +134,74 @@ h1 {
 .sbt:active {
     box-shadow: #3c4fe0 0 3px 7px inset;
     transform: translateY(2px);
+} */
+
+
+/* new button */
+.height {
+
+    height: 15vh;
 }
+
+.form {
+    position: relative;
+    width: 600px;
+}
+
+.form .fa-search {
+
+    position: absolute;
+    top: 017px;
+    left: 20px;
+    color: #9ca3af;
+
+}
+
+.form span {
+
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan {
+    padding-left: 7px;
+    /* padding-top: 10px; */
+}
+
+.left-pan i {
+    top: 200px;
+    padding-left: 10px;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: #76aee6 .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+#searchQuery{
+    padding-left: 20px;
+}
+
+.form-input {
+    height: 50px;
+    text-indent: 33px;
+    border-radius: 10px;
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border-color: #76aee6;
+}
+
