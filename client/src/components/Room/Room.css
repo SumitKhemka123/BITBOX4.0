@@ -53,19 +53,3 @@
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
-
-
-.control-buttons {
-    display: flex;
-    /* Arrange buttons horizontally */
-    justify-content: center;
-    /* Space buttons evenly */
-    margin-top: 5px;
-    /* Add spacing from video */
-}
-
-.control-buttons button {
-    margin: 10px;
-    padding: 5px 5px;
-    border: 1px solid #ddd;
-  }

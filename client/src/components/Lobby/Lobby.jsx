@@ -22,6 +22,7 @@ const LobbyScreen = () => {
     (data) => {
       const { email, room } = data;
       navigate(`/room/${room}`);
+      console.log(email);
     },
     [navigate]
   );
@@ -56,19 +57,22 @@ const LobbyScreen = () => {
     //     <button>Join</button>
     //   </form>
     // </div>
-    <div className="container">
+    <div className="body1">
+      <div className="container">
       <div className="brand-title">Join the Lobby</div>
       <form className="inputs" onSubmit={handleSubmitForm}>
-        <label htmlFor="email">Email ID: </label>
+        <label className="label-lo" htmlFor="email">Email ID: </label>
         <input
+          className="input-lo"
           type="email" id="email"
           placeholder="example@test.com"
           value={email}
           autoComplete="off"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="room">Room No: </label>
+        <label className="label-lo" htmlFor="room">Room No: </label>
         <input
+          className="input-lo"
           type="text" id="room"
           placeholder="Room Number"
           value={room}
@@ -76,7 +80,9 @@ const LobbyScreen = () => {
           onChange={(e) => setRoom(e.target.value)}
         />
         <button className="but" type="submit">JOIN</button>
+        <button className="button-lo" type="submit">JOIN</button>
       </form>
+    </div>
     </div>
   );
 };

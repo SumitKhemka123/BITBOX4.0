@@ -25,7 +25,7 @@ function YouTubeSearch() {
 
     return (
         <div>
-            <h1 className="yt-head flex">Video Resources</h1>
+            <h1 className="yt-head flex h1-yt">Video Resources</h1>
             <div className="wrapper flex">
                 <div className="container">
                     <div className="height flex">
