@@ -64,6 +64,7 @@ const LobbyScreen = () => {
           type="email" id="email"
           placeholder="example@test.com"
           value={email}
+          autoComplete="off"
           onChange={(e) => setEmail(e.target.value)}
         />
         <label htmlFor="room">Room No: </label>
@@ -71,9 +72,10 @@ const LobbyScreen = () => {
           type="text" id="room"
           placeholder="Room Number"
           value={room}
+          autoComplete="off"
           onChange={(e) => setRoom(e.target.value)}
         />
-        <button type="submit">JOIN</button>
+        <button className="but" type="submit">JOIN</button>
       </form>
     </div>
   );
