@@ -5,13 +5,15 @@ import Login from "./components/login/Login";
 import LobbyScreen from './components/Lobby/Lobby';
 import RoomPage from './components/Room/Room';
 import Study from "./components/studymaterial/study";
+import Scholarship from "./components/scholarship/Scholarship";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Study />} />
+        <Route path="/" element={<Scholarship />} />
+        <Route path="/study" element={<Study />} />
         <Route path="/Lobby" element={<LobbyScreen />} />
         <Route path="/room/:roomId" element={<RoomPage />} />
         <Route path="/login" element={<Login />}></Route>

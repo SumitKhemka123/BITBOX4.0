@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="container">
+    <div className="containers">
       <div className="navbar">
         <img src="logo" alt="" className="logo" />
-        <ul>
-          <li>Home</li>
-          <li>Product</li>
-          <li>Features</li>
-          <li>About</li>
+        <ul className="ul-navbar">
+          <li className="li-navbar">Home</li>
+          <li className="li-navbar">Product</li>
+          <li className="li-navbar">Features</li>
+          <li className="li-navbar">About</li>
         </ul>
         <div className="button-nav">
           <Link to="./login">

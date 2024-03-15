@@ -1,4 +1,4 @@
-.container {
+.containers {
 	width: 100vw;
 	min-height: 100vh;
 	background-color: #ced8ff;
@@ -32,13 +32,13 @@
 	cursor: pointer;
 }
 
-ul {
+.ul-navbar {
 	flex: 1;
 	list-style: none;
 	text-align: center;
 }
 
-ul li {
+.li-navbar {
 	display: inline-block;
 	margin: 10px 20px;
 	font-size: 18px;

@@ -58,7 +58,7 @@ const LobbyScreen = () => {
     //   </form>
     // </div>
     <div className="body1">
-      <div className="container">
+      <div className="container-lobby">
       <div className="brand-title">Join the Lobby</div>
       <form className="inputs" onSubmit={handleSubmitForm}>
         <label className="label-lo" htmlFor="email">Email ID: </label>
