@@ -9,12 +9,12 @@
     padding: 0;
 }
 
-body {
+/* body {
     font-family: sans-serif;
     background: #d1d5db;
-}
+} */
 
-h1 {
+.h1-yt {
     font-size: 2.5rem;
     font-weight: 700;
     color: #333;
