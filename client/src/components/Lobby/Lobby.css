@@ -4,7 +4,7 @@ input {
   caret-color: red;
 }
 
-body {
+.body1 {
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -43,7 +43,7 @@ body {
   padding-top:30px;
 }
 
-label, input, button {
+.label-lo, .input-lo, .button-lo {
   display: block;
   width: 100%;
   padding: 0;
@@ -52,19 +52,19 @@ label, input, button {
   box-sizing: border-box;
 }
 
-label {
+.label-lo {
   margin-bottom: 4px;
 }
 
-label:nth-of-type(2) {
+.label-lo:nth-of-type(2) {
   margin-top: 12px;
 }
 
-input::placeholder {
+.input-lo::placeholder {
   color: gray;
 }
 
-input {
+.input-lo {
   background: #ecf0f3;
   padding: 10px;
   padding-left: 20px;
@@ -74,7 +74,7 @@ input {
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
-button {
+.button-lo {
   color: white;
   margin-top: 20px;
   background: #1DA1F2;
@@ -86,7 +86,7 @@ button {
   transition: 0.5s;
 }
 
-button:hover {
+.button-lo:hover {
   box-shadow: none;
 }
 
