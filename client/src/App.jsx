@@ -7,6 +7,7 @@ import RoomPage from './components/Room/Room';
 import Study from "./components/studymaterial/study";
 import Scholarship from "./components/scholarship/Scholarship";
 import Homepage from "./components/HomePage/Homepage";
+import Donate from "./components/donate/Donate";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/room/:roomId" element={<RoomPage />} />
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/donate" element={<Donate />}></Route>
       </Routes>
     </BrowserRouter>
   );
