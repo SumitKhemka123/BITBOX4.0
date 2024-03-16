@@ -10,8 +10,8 @@ function Navbar() {
         <img src="logo" alt="" className="logo" />
         <ul className="ul-navbar">
           <li className="li-navbar">Home</li>
-          <li className="li-navbar">Product</li>
-          <li className="li-navbar">Features</li>
+          <li className="li-navbar">Donate</li>
+          <li className="li-navbar">Contact Us</li>
           <li className="li-navbar">About</li>
         </ul>
         <div className="button-nav">
