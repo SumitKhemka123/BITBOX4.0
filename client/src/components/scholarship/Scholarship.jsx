@@ -4,7 +4,7 @@ import './scholarship.css';
 function Scholarship() {
   return (
     <>
-      <section id="st-header">
+      <section id="st-header-sc">
         <div className="heading">
           <h1 className="underline1">Scholarships</h1>
         </div>

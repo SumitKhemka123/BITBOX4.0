@@ -11,13 +11,13 @@
     --black-color: #000000;
 }
 
-/* body {
+.body-signup {
     background-image: url("https://static.vecteezy.com/system/resources/previews/002/463/630/large_2x/jungle-wild-nature-green-color-scene-vector.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-} */
+}
 
 /* a {
     text-decoration: none;
@@ -28,7 +28,7 @@ a:hover {
     text-decoration: underline;
 } */
 
-.wrapper {
+.wrapper-signup {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -129,15 +129,15 @@ a:hover {
     margin-bottom: 10px;
 }
 
-.label {
+.label-signup {
     position: absolute;
     top: -28px;
     left: 20px;
     transition: 0.2s;
 }
 
-.input-field:focus~.label,
-.input-field:valid .label {
+.input-field:focus~.label-signup,
+.input-field:valid .label-signup {
     position: absolute;
     top: -10px;
     left: 20px;
@@ -186,7 +186,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 564px) {
-    .wrapper {
+    .wrapper-signup {
         padding: 20px;
     }
 

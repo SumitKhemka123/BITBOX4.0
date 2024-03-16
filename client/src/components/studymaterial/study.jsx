@@ -3,8 +3,8 @@ import './study.css';
 
 function Study() {
   return (
-    <div>
-      <section id="st-header">
+    <div className='body-study'>
+      <section id="st-header-study">
         <div className="heading">
           <h1 className="underline1 h1-s">Study Material</h1>
         </div>
