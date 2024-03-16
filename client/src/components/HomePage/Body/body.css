@@ -7,6 +7,8 @@
     font-family: "Inter", sans-serif;
 } */
 
+
+/* HERO SECTION CSS */
 .body-login {
     display: flex;
     height: 100vh;
@@ -44,23 +46,10 @@
 }
 
 @keyframes blink {
-    50% { opacity: 0 }
+    50% {
+        opacity: 0
+    }
 }
-/* 
-.cont-header{
-    background-color: blueviolet;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
-
-.conts-head{
-    width: 50%;
-}
-
-.conts-head img{
-    width: 100%;
-} */
 
 #hero {
     display: flex;
@@ -76,7 +65,7 @@
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    z-index: 1; /* Ensures text content is on top of the image */
+    z-index: 1;
 }
 
 #hero h4 {
@@ -105,7 +94,7 @@
 }
 
 .image-container img {
-    width: 80%; 
+    width: 80%;
     /* height: 90vh; */
     max-width: 100%;
     max-height: 100%;
@@ -120,4 +109,181 @@
     cursor: pointer;
     font-weight: 700;
     font-size: 20px;
+}
+
+
+/* FEATURES SECTION  */
+/* reset styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    overflow-x: hidden;
+} */
+
+/* :root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+    --box-shadow-color: var(--accent-color);
+} */
+
+/* ScrollBar CSS */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(to top, #2294ed, #1d69a3);
+}
+
+
+::selection {
+    background: #2294ed;
+    color: #fff;
+}
+
+
+/* Utility classes */
+
+.container-feature {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.secondary-button {
+    border: 0.5px solid #577592;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #183b56 !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover {
+    border-color: #2294ed;
+    color: #2294ed !important;
+}
+
+.underline1 {
+    position: relative;
+}
+
+.underline1:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    border-bottom: 1px solid #219ebc;
+}
+
+/* Our Products Section section */
+
+.features-section {
+    padding: 20px 20px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 70px;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features-heading-text {
+    margin-bottom: 10px;
+    color: #219ebc;
+}
+
+.features-area {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.features-card {
+    height: 250px;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+.features-card a {
+    color: rgb(0, 99, 228);
+    text-decoration: none;
+    margin-top: 1em;
+    display: inline-block;
+    padding: .5em;
+    margin-left: -.5em;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.features-card a:before,
+.features-card a:after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid rgb(0, 99, 228);
+    border-radius: 1em;
+    bottom: .3em;
+    transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.features-card a:after {
+    width: 82%;
+    left: 1em;
+    transform: translateX(110%);
+}
+
+.features-card a:hover:before {
+    transform: scaleX(0.3);
+}
+
+.features-card a:hover:after {
+    transform: translateX(0);
+}
+
+.features-card img {
+    width: 60px;
+}
+
+#sc-img {
+    width: 90px;
 }
