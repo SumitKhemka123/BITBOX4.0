@@ -5,7 +5,7 @@ import studyimg from "../../../assets/book.png";
 import scholarimg from "../../../assets/scholarship1.png";
 import quizimg from "../../../assets/asset 14.svg";
 import videoimg from "../../../assets/asset 15.svg";
-import donateimg from "../../../assets/bookd.png";
+import donateimg from "../../../assets/video-call.png";
 import doubtimg from "../../../assets/asset 16.svg";
 
 function Body() {
@@ -43,7 +43,7 @@ function Body() {
       <section className="features-section" id="features">
         <div className="container-feature">
           <div className="features-header">
-            <h2 className="features-heading-text underline1 op">Our Products</h2>
+            <h2 className="features-heading-text underline1 op">Our Features</h2>
           </div>
           <div className="features-area flex">
             <div className="features-card flex">
@@ -79,10 +79,10 @@ function Body() {
               <a href="./yt-search.html" className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
             </div>
             <div className="features-card flex">
-              <img src={donateimg} alt="s5" id="sc-img" />
-              <h3>Book Donate</h3>
+              <img src={donateimg} alt="s5" id="sc-img" style={{ height: '71px' }} />
+              <h3>Video-Calling</h3>
               <p>
-                Donate Your Books to the Needy which will help them in achieving their dreams.
+              Elevate your learning experience through face-to-face video calls with peers.
               </p>
               <a href="./donate.html" className="secondary-button" style={{ marginBottom: '8px' }}>Learn more <i className="fa-solid fa-right-long"></i></a>
             </div>

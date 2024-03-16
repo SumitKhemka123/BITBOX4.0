@@ -1,9 +1,11 @@
 import React from 'react';
 import './study.css';
-
+import Navbar from "../navbar/Navbar"
 function Study() {
   return (
-    <div className='body-study'>
+   <>
+   <Navbar />
+   <div className='body-study'>
       <section id="st-header-study">
         <div className="heading">
           <h1 className="underline1 h1-s">Study Material</h1>
@@ -13,7 +15,7 @@ function Study() {
         <div className="row">
           <div className="card">
             <div className="cover item-a">
-              <h1 className='h1-s'>Class 6</h1>
+              <h1 className='h1-s h2-s'>Class 6</h1>
               <div className="card-back">
                 <a href="https://ncert.nic.in/textbook/pdf/fhvs1dd.zip">Hindi</a>
                 <a href="https://ncert.nic.in/textbook/pdf/fehl1dd.zip">English</a>
@@ -26,7 +28,7 @@ function Study() {
           </div>
           <div className="card">
             <div className="cover item-b">
-              <h1 className='h1-s'>Class 7</h1>
+              <h1 className='h1-s h2-s'>Class 7</h1>
               <div className="card-back">
                 <a href="https://ncert.nic.in/textbook/pdf/ghdv1dd.zip">Hindi</a>
                 <a href="https://ncert.nic.in/textbook/pdf/gehc1dd.zip">English</a>
@@ -39,7 +41,7 @@ function Study() {
           </div>
           <div className="card">
             <div className="cover item-c">
-              <h1 className='h1-s'>Class 8</h1>
+              <h1 className='h1-s h2-s'>Class 8</h1>
               <div className="card-back">
                 <a href="https://ncert.nic.in/textbook/pdf/hhvs1dd.zip">Hindi</a>
                 <a href="https://ncert.nic.in/textbook/pdf/hehd1dd.zip">English</a>
@@ -54,7 +56,7 @@ function Study() {
         <div className="row">
           <div className="card">
             <div className="cover item-d">
-              <h1 className='h1-s'>Class 9</h1>
+              <h1 className='h1-s h2-s'>Class 9</h1>
               <div className="card-back">
                 <a href="https://ncert.nic.in/textbook/pdf/ihks1dd.zip">Hindi</a>
                 <a href="https://ncert.nic.in/textbook/pdf/iebe1dd.zip">English</a>
@@ -69,7 +71,7 @@ function Study() {
           </div>
           <div className="card">
             <div className="cover item-e">
-              <h1 className='h1-s'>Class 10</h1>
+              <h1 className='h1-s h2-s'>Class 10</h1>
               <div className="card-back">
                 <a href="https://ncert.nic.in/textbook/pdf/jhks1dd.zip">Hindi</a>
                 <a href="https://ncert.nic.in/textbook/pdf/jeff1dd.zip">English</a>
@@ -85,6 +87,7 @@ function Study() {
         </div>
       </section>
     </div>
+   </>
   );
 }
 
