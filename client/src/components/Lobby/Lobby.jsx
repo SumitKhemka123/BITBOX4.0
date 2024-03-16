@@ -79,7 +79,6 @@ const LobbyScreen = () => {
           autoComplete="off"
           onChange={(e) => setRoom(e.target.value)}
         />
-        <button className="but" type="submit">JOIN</button>
         <button className="button-lo" type="submit">JOIN</button>
       </form>
     </div>
