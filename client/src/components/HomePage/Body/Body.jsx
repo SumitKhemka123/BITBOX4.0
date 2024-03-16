@@ -1,4 +1,4 @@
-import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter} from 'react-simple-typewriter'
 import "./body.css";
 import homeimg from "../../../assets/homeimg.png";
 

@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./signup.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    try {
+      await axios.post("http://localhost:5000/signup", {
+        fname,
+        lname,
+        email,
+        password,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div className="body-signup">
       <div className="wrapper-signup">
@@ -19,6 +40,7 @@ function Signup() {
                 id="fname"
                 autoComplete="off"
                 required
+                onChange={(e) => setFname(e.target.value)}
               />
 
               <label htmlFor="user" className="label-signup">
@@ -33,6 +55,7 @@ function Signup() {
                 id="lname"
                 autoComplete="off"
                 required
+                onChange={(e) => setLname(e.target.value)}
               />
               <label htmlFor="user" className="label-signup">
                 Last Name
@@ -46,6 +69,7 @@ function Signup() {
                 id="email"
                 className="input-field"
                 autoComplete="off"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="user" className="label-signup">
                 E-Mail
@@ -59,6 +83,7 @@ function Signup() {
                 name="password"
                 id="pass"
                 autoComplete="off"
+                onChange={(e) => setPassword(e.target.value)}
               />
               <label htmlFor="pass" className="label-signup">
                 Password
@@ -66,7 +91,13 @@ function Signup() {
             </div>
 
             <div className="input-box">
-              <button className="input-submit">SignUp</button>
+              <button
+                className="input-submit"
+                type="submit"
+                onClick={handleSubmit}
+              >
+                SignUp
+              </button>
             </div>
             <div className="register">
               <span>

@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    try {
+      await axios.post("http://localhost:5000/login", {
+        email,
+        password,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <div className="body-login">
       <div className="wrapper-login">
@@ -20,6 +37,7 @@ function Login() {
                 className="input-field"
                 autoComplete="off"
                 required
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="user" className="label-login">
                 E-mail
@@ -30,8 +48,10 @@ function Login() {
                 name="password"
                 type="password"
                 id="pass"
-                class="input-field"
-                autocomplete="off"
+                className="input-field"
+                autoComplete="off"
+                required
+                onChange={(e) => setPassword(e.target.value)}
               />
               <label htmlFor="pass" className="label-login">
                 Password
@@ -43,13 +63,13 @@ function Login() {
                 <input type="checkbox" id="remember" />
                 <label htmlFor="remember">Remember me</label>
               </div>
-              <div class="forgot">
+              <div className="forgot">
                 <a href="#">Forgot password</a>
               </div>
             </div>
 
             <div className="input-box">
-              <button className="input-submit">Login</button>
+              <button className="input-submit" type="submit" onClick={handleSubmit}>Login</button>
             </div>
             <div className="register">
               <span>
