@@ -53,7 +53,7 @@
 
 #hero {
     display: flex;
-    height: 90vh;
+    height: 100vh;
     padding: 0 80px;
     background-color: #d9dcea;
 }
@@ -220,6 +220,7 @@ body {
 .features-heading-text {
     margin-bottom: 10px;
     color: #219ebc;
+    font-size: 3rem;
 }
 
 .features-area {
@@ -243,6 +244,16 @@ body {
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease-out;
+}
+
+.features-card h3{
+    padding: 10px;
+}
+
+.features-card:hover{
+	transform: translate(0px,-5px);
+	box-shadow: 0 0 100px rgba(51, 175, 224, 0.4);
+	transition: all ease-in 0.3s;
 }
 
 .features-card a {

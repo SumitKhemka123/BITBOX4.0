@@ -1,17 +1,20 @@
 import React from 'react';
 import './scholarship.css';
+import Navbar from "../navbar/Navbar";
 
 function Scholarship() {
   return (
     <>
-      <section id="st-header-sc">
+    <Navbar/ >
+     <div className="cont-sc">
+     <section id="st-header-sc">
         <div className="heading">
           <h1 className="underline1">Scholarships</h1>
         </div>
       </section>
 
       <div className="cards-sc">
-        <div className="card-sc">
+        <div className="card-sc card-sc-1">
           <h2>Pre-Matric Scholarship Scheme for SC/ST Students (Class 6-10)</h2>
           <div className="card-desc">
             <ul>
@@ -50,7 +53,7 @@ function Scholarship() {
           </div>
         </div>
 
-        <div className="card-sc">
+        <div className="card-sc card-sc-2">
           <h2>Merit-Cum-Means Scholarship (Beedi/Mine Workers)</h2>
           <div className="card-desc">
             <ul>
@@ -94,7 +97,7 @@ function Scholarship() {
           </div>
         </div>
 
-        <div className="card-sc">
+        <div className="card-sc card-sc-3">
           <h2>
             PM YASASVI Pre-Matric Scholarship Scheme for OBC, EBC, and DNT Students (Class 9-10)
           </h2>
@@ -134,7 +137,7 @@ function Scholarship() {
           </div>
         </div>
 
-        <div className="card-sc">
+        <div className="card-sc card-sc-4">
           <h2>Gujarat Tribal Development Department Scholarships</h2>
           <div className="card-desc">
             <ul>
@@ -170,7 +173,7 @@ function Scholarship() {
           </div>
         </div>
 
-        <div className="card-sc">
+        <div className="card-sc card-sc-5">
           <h2>
             National Scholarship for Children of Workers Engaged in Unclean Occupations (Class 1-10)
           </h2>
@@ -211,7 +214,7 @@ function Scholarship() {
           </div>
         </div>
 
-        <div className="card-sc">
+        <div className="card-sc card-sc-6">
           <h2>National Talent Search Examination (NTSE)</h2>
           <div className="card-desc">
             <ul>
@@ -247,6 +250,7 @@ function Scholarship() {
           </div>
         </div>
       </div>
+     </div>
     </>
   );
 }
