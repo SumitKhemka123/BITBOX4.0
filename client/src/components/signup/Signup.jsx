@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function Signup() {
   return (
-    <div>
-      <div className="wrapper">
+    <div className="body-signup">
+      <div className="wrapper-signup">
         <div className="signup-box">
           <div className="login-header">
             <span>Signup</span>
@@ -21,7 +21,7 @@ function Signup() {
                 required
               />
 
-              <label htmlFor="user" className="label">
+              <label htmlFor="user" className="label-signup">
                 First Name
               </label>
             </div>
@@ -34,7 +34,7 @@ function Signup() {
                 autoComplete="off"
                 required
               />
-              <label htmlFor="user" className="label">
+              <label htmlFor="user" className="label-signup">
                 Last Name
               </label>
             </div>
@@ -47,7 +47,7 @@ function Signup() {
                 className="input-field"
                 autoComplete="off"
               />
-              <label htmlFor="user" className="label">
+              <label htmlFor="user" className="label-signup">
                 E-Mail
               </label>
             </div>
@@ -60,7 +60,7 @@ function Signup() {
                 id="pass"
                 autoComplete="off"
               />
-              <label htmlFor="pass" className="label">
+              <label htmlFor="pass" className="label-signup">
                 Password
               </label>
             </div>
