@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./signup.css";
 import { Link ,useNavigate} from "react-router-dom";
 import axios from "axios";
+import Navbar from "../navbar/Navbar";
+import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -33,6 +35,8 @@ function Signup() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="body-signup">
       <div className="wrapper-signup">
         <div className="signup-box">
@@ -41,6 +45,9 @@ function Signup() {
           </div>
           <form action="/signup" method="post">
             <div className="input-box">
+            <div className="input-icon">
+                <FaUser />
+              </div>
               <input
                 type="text"
                 className="input-field"
@@ -56,6 +63,9 @@ function Signup() {
               </label>
             </div>
             <div className="input-box">
+            <div className="input-icon">
+                <FaUser />
+              </div>
               <input
                 type="text"
                 className="input-field"
@@ -71,12 +81,16 @@ function Signup() {
             </div>
 
             <div className="input-box">
+            <div className="input-icon">
+                <FaEnvelope />
+              </div>
               <input
                 type="text"
                 name="email"
                 id="email"
                 className="input-field"
                 autoComplete="off"
+                required
                 onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="user" className="label-signup">
@@ -85,6 +99,9 @@ function Signup() {
             </div>
 
             <div className="input-box">
+            <div className="input-icon">
+                <FaLock />
+              </div>
               <input
                 type="password"
                 className="input-field"
@@ -116,6 +133,7 @@ function Signup() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

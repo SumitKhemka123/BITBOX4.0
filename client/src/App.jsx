@@ -25,7 +25,7 @@ function App() {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/donate" element={<Donate />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/Yt" element={<YouTubeSearch />}></Route>
+        <Route path="/video" element={<YouTubeSearch />}></Route>
       </Routes>
     </BrowserRouter>
   );

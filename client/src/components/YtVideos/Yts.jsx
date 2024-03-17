@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Yts.css'
 import img from "./videoresource.jpeg";
+import { IoSearch } from "react-icons/io5";
+import Navbar from "../navbar/Navbar";
+
 
 const apiKey = 'AIzaSyCc_sJxkrdB7l3-cd2RiWYOLx-UncJcwlk'; 
 
@@ -26,6 +29,7 @@ function YouTubeSearch() {
 
     return (
         <div>
+            <Navbar/>
             <h1 className="yt-head flex h1-yt">Video Resources</h1>
             <div className="wrapper-yt flex">
                 <div className="container">
@@ -40,7 +44,7 @@ function YouTubeSearch() {
                                         className="form-control form-input"
                                         placeholder="Search anything..."
                                     />
-                                    {/* <span className="left-pan"><i className="fa fa-microphone"></i></span> */}
+                                    <span className="left-pan"><IoSearch style={{ fontSize: '24px',paddingLeft :'10px'}}/></span>
                                     {/* <button type="submit" className="sbt">Search</button> */}
                                 </div>
                             </form>

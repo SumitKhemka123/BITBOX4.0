@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./login.css";
-import { Link , useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { FaEnvelope, FaLock } from 'react-icons/fa';
+import Navbar from "../navbar/Navbar";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -30,6 +32,8 @@ function Login() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="body-login">
       <div className="wrapper-login">
         <div className="login-box">
@@ -39,6 +43,9 @@ function Login() {
 
           <form onSubmit={handleSubmit}>
             <div className="input-box">
+              <div className="input-icon">
+                <FaEnvelope />
+              </div>
               <input
                 type="email"
                 name="email"
@@ -53,6 +60,9 @@ function Login() {
               </label>
             </div>
             <div className="input-box">
+              <div className="input-icon">
+                <FaLock />
+              </div>
               <input
                 name="password"
                 type="password"
@@ -79,13 +89,14 @@ function Login() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
 const linkStyle = {
-  textDecoration: 'underline', 
+  textDecoration: 'underline',
   color: 'white',
-  marginLeft: '5px' 
+  marginLeft: '5px'
 };
 
 export default Login;

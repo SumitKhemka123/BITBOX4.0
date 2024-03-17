@@ -54,7 +54,7 @@ function Body() {
                 Study at your own pace with the Guide Books by NCERT all at one place.
               </p>
               <Link to='/study'>
-              <a href="./study.html" className="secondary-button lea">Learn More <i className="fa-solid fa-right-long"></i></a>
+              <a className="secondary-button lea">Learn More <i className="fa-solid fa-right-long"></i></a>
               </Link>
             </div>
             <div className="features-card flex">
@@ -64,7 +64,7 @@ function Body() {
                 Get To Know About Various Government ScholarShips.
               </p>
               <Link to='/scholarship'>
-              <a href="./scholarship.html" className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
+              <a className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
               </Link>
             </div>
             <div className="features-card flex">
@@ -73,7 +73,7 @@ function Body() {
               <p>
                 Pinpoint knowledge gaps and improve understanding with personalized quiz feedback.
               </p>
-              <a href="#" className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
+              <a className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
             </div>
             <div className="features-card flex">
               <img src={videoimg} alt="s4" />
@@ -81,8 +81,8 @@ function Body() {
               <p>
                 Explore key concepts through engaging, informative videos with expert instruction.
               </p>
-              <Link to='Yt'>
-              <a href="./yt-search.html" className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
+              <Link to='video'>
+              <a className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
               </Link>
             </div>
             <div className="features-card flex">
@@ -91,15 +91,15 @@ function Body() {
               <p>
               Elevate your learning experience through face-to-face video calls with peers.
               </p>
-              <Link to='/donate'>
-              <a href="./donate.html" className="secondary-button" style={{ marginBottom: '8px' }}>Learn more <i className="fa-solid fa-right-long"></i></a>
+              <Link to='/lobby'>
+              <a className="secondary-button" style={{ marginBottom: '8px' }}>Learn more <i className="fa-solid fa-right-long"></i></a>
               </Link>
             </div>
             <div className="features-card flex">
               <img src={doubtimg} alt="s6" />
               <h3>Doubt Engine</h3>
               <p>Complex doubts made simple with our powerful doubt engine.</p>
-              <a href="./doubt.html" className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
+              <a className="secondary-button">Learn more <i className="fa-solid fa-right-long"></i></a>
             </div>
           </div>
         </div>
