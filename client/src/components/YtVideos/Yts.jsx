@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Yts.css'
+import img from "./videoresource.jpeg";
 
 const apiKey = 'AIzaSyCc_sJxkrdB7l3-cd2RiWYOLx-UncJcwlk'; 
 
@@ -26,7 +27,7 @@ function YouTubeSearch() {
     return (
         <div>
             <h1 className="yt-head flex h1-yt">Video Resources</h1>
-            <div className="wrapper flex">
+            <div className="wrapper-yt flex">
                 <div className="container">
                     <div className="height flex">
                             <form onSubmit={handleSearch}>
@@ -46,7 +47,7 @@ function YouTubeSearch() {
                     </div>
                 </div>
                 {showImage && (
-                    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="Student Studying from YouTube" className="search-image" />
+                    <img src={img} alt="Student Studying from YouTube" className="search-image" />
                 )}
             </div>
             <div id="results">

@@ -109,7 +109,7 @@ function Signup() {
             </div>
             <div className="register">
               <span>
-                Already have an account? <Link to="/Login">Login</Link>
+                Already have an account? <Link to="/Login" style={linkStyle}>Login</Link>
               </span>
             </div>
           </form>
@@ -118,5 +118,11 @@ function Signup() {
     </div>
   );
 }
+
+const linkStyle = {
+  textDecoration: 'underline', 
+  color: 'white',
+  marginLeft: '5px' 
+};
 
 export default Signup;

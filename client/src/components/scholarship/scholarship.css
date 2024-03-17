@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
 }
 
-.heading h1 {
+.heading-sc h1 {
     top: 100px;
     text-align: center;
     font-size: 3rem;
@@ -25,11 +25,11 @@
     color: #eb6d37;
 }
 
-.underline1 {
+.underline1-sc {
     position: relative;
 }
 
-.underline1:before {
+.underline1-sc:before {
     content: '';
     position: absolute;
     display: block;

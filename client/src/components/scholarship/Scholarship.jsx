@@ -8,8 +8,8 @@ function Scholarship() {
     <Navbar/ >
      <div className="cont-sc">
      <section id="st-header-sc">
-        <div className="heading">
-          <h1 className="underline1">Scholarships</h1>
+        <div className="heading-sc">
+          <h1 className="underline1-sc">Scholarships</h1>
         </div>
       </section>
 

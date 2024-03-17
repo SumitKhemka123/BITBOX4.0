@@ -189,11 +189,11 @@ body {
     color: #2294ed !important;
 }
 
-.underline1 {
+.underline1-b {
     position: relative;
 }
 
-.underline1:before {
+.underline1-b:before {
     content: '';
     position: absolute;
     display: block;
