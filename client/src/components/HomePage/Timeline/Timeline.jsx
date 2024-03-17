@@ -9,10 +9,15 @@ import { FaGraduationCap as SchoolIcon } from "react-icons/fa";
 
 function Timeline() {
   return (
+    <>
+    <div className="features-header">
+            <h2 className="features-heading-text underline1 op">Exam Timeline</h2>
+          </div>
     <VerticalTimeline className="Vertical-timeline">
+      
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        // contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="4th December 2024"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
@@ -24,7 +29,7 @@ function Timeline() {
         </h4>
         <p>
           For more details{" "}
-          <a href="https://www.unifiedcouncil.com/about-nstse.html">
+          <a className="a-time" href="https://www.unifiedcouncil.com/about-nstse.html">
             Click Here
           </a>
         </p>
@@ -32,6 +37,7 @@ function Timeline() {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
+        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="3rd December 2024"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<SchoolIcon />}
@@ -41,12 +47,13 @@ function Timeline() {
           Zonal Informatics Olympiad
         </h4>
         <p>
-          For more details <a href="https://www.iarcs.org.in/">Click Here</a>
+          For more details <a className="a-time" href="https://www.iarcs.org.in/">Click Here</a>
         </p>
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
+        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="3 September 2024"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<SchoolIcon />}
@@ -57,7 +64,7 @@ function Timeline() {
         </h4>
         <p>
           For more details{" "}
-          <a href="https://olympiads.hbcse.tifr.res.in/mathematical/prmo/">
+          <a className="a-time" href="https://olympiads.hbcse.tifr.res.in/mathematical/prmo/">
             Click Here
           </a>
         </p>
@@ -65,6 +72,7 @@ function Timeline() {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
+        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="26th November 2024"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<SchoolIcon />}
@@ -75,7 +83,7 @@ function Timeline() {
         </h4>
         <p>
           For more details{" "}
-          <a href="https://iapt.org.in/88-activities/2432-schedule-for-nses-inos-ios.html">
+          <a className="a-time" href="https://iapt.org.in/88-activities/2432-schedule-for-nses-inos-ios.html">
             Click Here
           </a>
         </p>
@@ -83,8 +91,9 @@ function Timeline() {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
+        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="21 April 2024"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<SchoolIcon />}
       >
         <h3 className="vertical-timeline-element-title">NTSE</h3>
@@ -93,7 +102,7 @@ function Timeline() {
         </h4>
         <p>
           For more details{" "}
-          <a href="https://ntsescholars.com/ntse_official_link.php">
+          <a className="a-time" href="https://ntsescholars.com/ntse_official_link.php">
             Click Here
           </a>
         </p>
@@ -101,8 +110,9 @@ function Timeline() {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
+        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="21 April 2024"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<SchoolIcon />}
       >
         <h3 className="vertical-timeline-element-title">NDA</h3>
@@ -111,14 +121,15 @@ function Timeline() {
         </h4>
         <p>
           For more details{" "}
-          <a href="https://www.shiksha.com/exams/nda-exam">Click Here</a>
+          <a className="a-time" href="https://www.shiksha.com/exams/nda-exam">Click Here</a>
         </p>
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
+        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="7 November 2024"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<SchoolIcon />}
       >
         <h3 className="vertical-timeline-element-title">KVPY</h3>
@@ -126,10 +137,11 @@ function Timeline() {
           Kishore Vaigyanik Protsahan Yojana
         </h4>
         <p>
-          For more details <a href="https://www.iarcs.org.in/">Click Here</a>
+          For more details <a className="a-time" href="https://www.iarcs.org.in/">Click Here</a>
         </p>
       </VerticalTimelineElement>
     </VerticalTimeline>
+    </>
   );
 }
 

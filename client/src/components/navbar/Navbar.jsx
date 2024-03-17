@@ -9,10 +9,18 @@ function Navbar() {
       <div className="navbar">
         <img src={logo} alt="" className="logo" />
         <ul className="ul-navbar">
-          <li className="li-navbar">Home</li>
-          <li className="li-navbar">Donate</li>
-          <li className="li-navbar">Contact Us</li>
-          <li className="li-navbar">About</li>
+          <Link to="/">
+            <li className="li-navbar">Home</li>
+          </Link>
+          <Link to="/donate">
+            <li className="li-navbar">Donate</li>
+          </Link>
+          <Link to="/">
+            <li className="li-navbar">Contact Us</li>
+          </Link>
+          <Link to="/about">
+            <li className="li-navbar">About</li>
+          </Link>
         </ul>
         <div className="button-nav">
           <Link to="./login">

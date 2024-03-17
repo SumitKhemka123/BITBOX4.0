@@ -8,6 +8,7 @@ import Study from "./components/studymaterial/study";
 import Scholarship from "./components/scholarship/Scholarship";
 import Homepage from "./components/HomePage/Homepage";
 import Donate from "./components/donate/Donate";
+import YouTubeSearch from "./components/YtVideos/Yts";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/about/About";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/donate" element={<Donate />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/Yt" element={<YouTubeSearch />}></Route>
       </Routes>
     </BrowserRouter>
   );
