@@ -43,7 +43,7 @@ function Body() {
       <section className="features-section" id="features">
         <div className="container-feature">
           <div className="features-header">
-            <h2 className="features-heading-text underline1 op">Our Features</h2>
+            <h2 className="features-heading-text underline1-b op">Our Features</h2>
           </div>
           <div className="features-area flex">
             <div className="features-card flex">

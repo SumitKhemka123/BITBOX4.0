@@ -67,22 +67,12 @@ function Login() {
               </label>
             </div>
 
-            <div className="remember-forgot">
-              <div className="remember-me">
-                <input type="checkbox" id="remember" />
-                <label htmlFor="remember">Remember me</label>
-              </div>
-              <div className="forgot">
-                <a href="#">Forgot password</a>
-              </div>
-            </div>
-
             <div className="input-box">
               <button className="input-submit" type="submit">Login</button>
             </div>
             <div className="register">
               <span>
-                Don't have an account? <Link to="/signup">Register</Link>
+                Don't have an account? <Link to="/signup" style={linkStyle}>Register</Link>
               </span>
             </div>
           </form>
@@ -91,5 +81,11 @@ function Login() {
     </div>
   );
 }
+
+const linkStyle = {
+  textDecoration: 'underline', 
+  color: 'white',
+  marginLeft: '5px' 
+};
 
 export default Login;
