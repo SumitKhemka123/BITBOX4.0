@@ -1,25 +1,34 @@
 import React, { useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
-  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("http://localhost:5000/login", {
         email,
         password,
       });
+
+      if (response.data.success) {
+        navigate("/");
+      }
+      else {
+        navigate("/signup");
+      }
     } catch (error) {
       console.log(error);
     }
   }
+
   return (
     <div className="body-login">
       <div className="wrapper-login">
@@ -28,7 +37,7 @@ function Login() {
             <span>Login</span>
           </div>
 
-          <form action="/login" method="post">
+          <form onSubmit={handleSubmit}>
             <div className="input-box">
               <input
                 type="email"
@@ -69,7 +78,7 @@ function Login() {
             </div>
 
             <div className="input-box">
-              <button className="input-submit" type="submit" onClick={handleSubmit}>Login</button>
+              <button className="input-submit" type="submit">Login</button>
             </div>
             <div className="register">
               <span>

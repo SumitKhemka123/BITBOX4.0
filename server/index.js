@@ -1,4 +1,4 @@
-import {Server} from 'socket.io'
+import { Server } from 'socket.io';
 import express from 'express';
 import bodyParser from 'body-parser';
 import pg from 'pg';
@@ -11,18 +11,19 @@ const io = new Server(8000, {
 });
 
 const db = new pg.Client({
-    user: "postgres" ,
+    user: "postgres",
     host: "localhost",
     database: "Mercer",
     password: "vishwas",
     port: 5432,
 });
 
-db.connect();
+db.connect(); // Connect to the PostgreSQL database
 
 const app = express();
-const PORT=5000;
+const PORT = 5000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("client"));
 app.use(bodyParser.json());
@@ -70,48 +71,53 @@ app.post("/signup", async (req, res) => {
 
     const check = await db.query("SELECT * FROM signup WHERE email = $1", [email]);
     if (check.rows.length > 0) {
-      return res.send("Email already exists. Try using a different email");
+      return res.send({ success: true });
+      
     } else {
       const result = await db.query(
         "INSERT INTO signup(first_name, last_name, email, password) VALUES ($1, $2, $3, $4)",
         [fname, lname, email, password]
       );
       console.log("Signup Successful:", result.rows);
-      return res.send("Signup Successful");
+      return res.send({ success: true });
     }
   } catch (err) {
     console.error("Error during signup:", err);
-    return res.status(500).send("An error occurred during signup");
+    return res.send({ success: false });
   }
 });
 
 app.post("/login", async (req, res) => {
-  const {Email, Password}= req.body
+  const { email, password } = req.body;
 
   try {
-      const result = await db.query(
-        "SELECT password FROM signup WHERE email = $1",
-        [Email] 
-      );
-      if (result.rows.length > 0) {
-        const getPassword = result.rows[0].password;
-        if (getPassword == Password) {
-          res.send("User Exist Login succesfull");
-          res.sendFile(__dirname + "/client/index.html");
-        } else {
-          res.send("Incorrect Password");
-        }
+    const result = await db.query(
+      "SELECT * FROM signup WHERE email = $1",
+      [email]
+    );
+    if (result.rows.length > 0) {
+      const getPassword = result.rows[0].password;
+      if (getPassword === password) {
+        console.log("User Exist Login successful");
+        // Send success response (e.g., { success: true })
+        return res.send({ success: true });
       } else {
-          res.sendFile(__dirname + "/client/signup.html");
+        console.log("Incorrect Password");
+        // Send error response (e.g., { success: false, error: "Incorrect Password" })
+        return res.send({ success: false, error: "Incorrect Password" });
       }
-    } catch (err) {
-      console.log(err);
+    } else {
+      console.log("User not found");
+      // Send user not found response
+      return res.send({ success: false, error: "User not found" });
     }
-    console.log(Password, Email);
-  });
+  } catch (err) {
+    console.log("Error during login:", err);
+    return res.status(500).send("An error occurred during login");
+  }
+});
 
 
-
-app.listen(PORT , ()=>{
-  console.log('Server is running on PORT ');
-})
+app.listen(PORT, () => {
+  console.log('Server is running on PORT');
+});

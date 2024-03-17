@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./signup.css";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import axios from "axios";
 
 function Signup() {
@@ -8,17 +8,25 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+  const navigate=useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/signup", {
+      const response = await axios.post("http://localhost:5000/signup",{
         fname,
         lname,
         email,
         password,
       });
+
+      if (response.data.success) {
+        navigate("/login");
+      }
+      else {
+        navigate("/signup");
+      }
     } catch (error) {
       console.log(error);
     }
